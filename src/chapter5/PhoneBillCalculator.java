@@ -10,6 +10,7 @@ public class PhoneBillCalculator {
 
         double plan = getPlanCost();
         int minutes = getOverageMinutes();
+        input.close();
         double minutesFee = chargeMinutes(minutes);
         double taxes = chargeTax(plan,minutesFee);
         double total = getTotal(plan,minutesFee,taxes);
